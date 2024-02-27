@@ -6,14 +6,25 @@
 
 1. Clone the repo
 2. Execute
-  ```
-  yarn install
-  ```
+
+```
+yarn install
+```
+
 3. Nest CLI must be installed
+
 ```
  npm i -g @nestjs/cli
 ```
+
 4. Start the database
+
 ```
 docker-compose up -d
+```
+
+5. Load seed
+
+```
+GET http://localhost:3000/api/v2/seed
 ```

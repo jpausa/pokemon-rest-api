@@ -71,6 +71,16 @@ export class PokemonService {
       throw new NotFoundException(`Pokemon with id ${id} not found`);
   }
 
+  async batchCreate(pokemons: CreatePokemonDto[]) {
+    await this.pokemonModel.deleteMany();
+    try {
+      const result = await this.pokemonModel.insertMany(pokemons);
+      return result;
+    } catch (error) {
+      this.handleExceptions(error);
+    }
+  }
+
   private handleExceptions(error: any) {
     if (error.code === 11000) {
       throw new BadRequestException(
