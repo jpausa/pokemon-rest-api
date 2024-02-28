@@ -5,7 +5,7 @@
 # Execute in development
 
 1. Clone the repo
-2. Execute
+2. Install dependencies
 
 ```
 yarn install
@@ -23,7 +23,16 @@ yarn install
 docker-compose up -d
 ```
 
-5. Load seed
+5. Clone the file ```.env.template``` and rename the copy to ```.env```
+
+6. Fill the env vars values in ```.env```
+
+7. Run the app
+```
+yarn start:dev
+```
+
+7. Load seed
 
 ```
 GET http://localhost:3000/api/v2/seed
