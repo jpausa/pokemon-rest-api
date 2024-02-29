@@ -1,7 +1,7 @@
 import * as joi from 'joi';
 
 export const JoiValidationSchema = joi.object({
-  MONGODB: joi
+  MONGODB_URI: joi
     .string()
     .required()
     .messages({ 'string.base': 'MONGODB must be a string' }),
