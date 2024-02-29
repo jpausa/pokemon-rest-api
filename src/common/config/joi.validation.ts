@@ -13,4 +13,8 @@ export const JoiValidationSchema = joi.object({
     .number()
     .default(10)
     .messages({ 'string.base': 'DEFAULT_LIMIT must be a number' }),
+  API_URL: joi
+    .string()
+    .required()
+    .messages({ 'string.base': 'API_URL must be a string' }),
 });
